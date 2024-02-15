@@ -2,7 +2,7 @@
 
 If you want to get the model gradient of URLBERT, please visit the following link
 
-[Google Drive Repository](https://drive.google.com/file/d/1h7F_Th5UXTMWC1yVM4SoXPg847sj8pfu/view?usp=drive_link)
+[Google Drive Repository](https://drive.google.com/drive/folders/16pNq7C1gYKR9inVD-P8yPBGS37nitE-D?usp=drive_link)
 
 ### Usage
 
@@ -21,7 +21,7 @@ config_kwargs = {
     "vocab_size": 5000,
 }
 
-config = AutoConfig.from_pretrained("../../bert_config/", **config_kwargs)
+config = AutoConfig.from_pretrained("./bert_config/", **config_kwargs)
 print(config)
 
 bert_model = AutoModelForMaskedLM.from_config(
@@ -29,7 +29,7 @@ bert_model = AutoModelForMaskedLM.from_config(
 )
 bert_model.resize_token_embeddings(config_kwargs["vocab_size"])
 
-bert_dict = torch.load("../../bert_model/large/urlBERT.pt", map_location='cpu')
+bert_dict = torch.load("./bert_model/urlBERT.pt", map_location='cpu')
 bert_model.load_state_dict(bert_dict)
 ```
 
