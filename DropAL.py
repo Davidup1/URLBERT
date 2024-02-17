@@ -6,7 +6,7 @@ import copy
 
 def kl(inputs, targets, reduction="sum"):
     """
-    计算kl散度
+    kl_div
     inputs：tensor，logits
     targets：tensor，logits
     """
@@ -18,7 +18,7 @@ def kl(inputs, targets, reduction="sum"):
 
 def adv_project(grad, norm_type='inf', eps=1e-6):
     """
-    L0,L1,L2正则，对于扰动计算
+    L0,L1,L2
     """
     if norm_type == 'l2':
         direction = grad / (torch.norm(grad, dim=-1, keepdim=True) + eps)
@@ -94,7 +94,7 @@ def dropAlloss(model: nn.Module, input_ids, token_type, atten_masks, batch_size,
         norm1 = delta_grad1.norm()
         norm2 = delta_grad2.norm()
 
-        # 梯度消失，退出
+
         if torch.isnan(norm1) or torch.isinf(norm1) or torch.isnan(norm2) or torch.isinf(norm2):
             return None
 

@@ -204,7 +204,7 @@ def main(args):
 
 if __name__ == "__main__":
 
-    seed_val = 42
+    seed_val = 2024
     random.seed(seed_val)
     np.random.seed(seed_val)
     torch.manual_seed(seed_val)
