@@ -8,9 +8,9 @@ For the convenience of research in the field of URL analysis, we trained URLBERT
 ### Training Design
 
 During the pre-training phase, we employed BERT's Masked Language Modeling (MLM) task. Additionally, we designed specific self-supervised contrastive learning tasks at the sentence level and token-level virtual adversarial training tasks. The training losses for these two tasks are denoted as Loss_con and Loss_VAT, respectively. The overall loss is defined as follows:
-$$
-Loss = Loss_{MLM} + 10 Loss_{VAT} + Loss_{con}
-$$
+
+![Loss](./media/Loss.png)
+
 ![FrameWork](./media/FrameWork.png)
 
 ### Directory Guide
