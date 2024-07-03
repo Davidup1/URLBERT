@@ -1,6 +1,3 @@
-# URLBERT: A Contrastive and Adversarial Pre-trained Model for URL Classification
-This is an implementation of the paper - "URLBERT: A Contrastive and Adversarial Pre-trained Model for URL Classification"
-
 ### Overview
 
 For the convenience of research in the field of URL analysis, we trained URLBERT, a pre-trained model based on BERT, using a large-scale unlabeled URL dataset. URLBERT is intended for various downstream tasks related to URL analysis. In comparisons with traditional neural networks in both URL-related downstream tasks and the broader field of NLP, URLBERT consistently achieves state-of-the-art (SOTA) performance.
